@@ -46,6 +46,17 @@ App.get('/api/userId', requireAuth, (req, res) => {
     res.status(200).send(res.locals.user._id)
 })
 
+App.all('*', (req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+    res.header('Access-Control-Allow-Headers', 'Content-Type');
+    if ('OPTIONS' == req.method) {
+        res.sendStatus(200);
+    } else {
+        next();
+    }
+});
+
 //User api
 App.use('/api/user', UserRoute);
 
