@@ -23,7 +23,7 @@ const { checkUser, requireAuth } = require('./middleware/auth.middleware')
 const port = process.env.PORT || 3000;
 
 const corsOptions = {
-    origin: 'http://localhost:5000',
+    origin: 'http://localhost:3000',
     // accept: '*/*',
     credentials: true,
     'allowedHeaders': ['sessionId', 'Content-Type'],
