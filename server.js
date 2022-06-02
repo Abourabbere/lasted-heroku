@@ -10,6 +10,8 @@ require('dotenv').config({ path: './config/.env' })
 //initialisation de mongo
 require('./config/db')
 
+// je suis juste ici avec mes codes
+
 //Importation des route
 const UserRoute = require('./routes/User.route')
 const ProductRoute = require('./routes/Product.route')
